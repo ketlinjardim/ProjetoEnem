@@ -1,7 +1,29 @@
 import { Text, TouchableOpacity, View, TextInput,Image } from 'react-native';
 import { style } from './style';
 
+import  { useState } from 'react';
+import * as Font from 'expo-font';
+import { useEffect } from 'react';
+import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
+import Kollektif from '../../assets/fonts/Kollektif.ttf';
+
+
+
 export default function Cadastro() {
+
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    async function loadFonts() {
+      await Font.loadAsync({
+        KollektifBold: KollektifBold,
+        Kollektif: Kollektif,
+      });
+      setFontsLoaded(true);
+    }
+
+    loadFonts();
+  }, []);
 
   return (
     <View style={style.container}> 
@@ -17,7 +39,7 @@ export default function Cadastro() {
         <TextInput style={style.TextInput} placeholder="Confirmar senha"/>
 
         <TouchableOpacity style={style.botao}>
-          <Text style={{color: '#fff', fontSize: 22}}>Entrar</Text>
+          <Text style={{color: '#fff', fontSize: 22, fontFamily: 'KollektifBold'}}>Entrar</Text>
         </TouchableOpacity>
       </View>
     </View>

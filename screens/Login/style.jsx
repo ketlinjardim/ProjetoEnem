@@ -26,7 +26,8 @@ export const styles = StyleSheet.create({
       borderRadius: 10,
       padding:20,
       color: '#797976',
-      fontSize: 18
+      fontSize: 18,
+      fontFamily: 'KollektifBold',
     },
     botao: {
       height: 50,
@@ -41,7 +42,8 @@ export const styles = StyleSheet.create({
   texto: {
     color: "#000",
     fontSize: 45,   
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'KollektifBold',
   },
 
   Logo: {

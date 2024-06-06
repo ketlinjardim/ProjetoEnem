@@ -8,6 +8,7 @@ export const style = StyleSheet.create({
       backgroundColor: "#FCFCFC",
       borderRadius: 10,
       justifyContent: "center",
+      alignItems:'center',
       padding: 10,
       fontFamily: 'Kollektif'
   
@@ -27,7 +28,8 @@ export const style = StyleSheet.create({
       borderRadius: 10,
       padding:20,
       color: '#797976',
-      fontSize: 18
+      fontSize: 18,
+      fontFamily: 'KollektifBold',
       
     },
     botao: {
@@ -43,6 +45,7 @@ export const style = StyleSheet.create({
     textAlign: 'center',
     color: "#000",
     fontSize: 45,
+    fontFamily: 'KollektifBold',
   },
 
   Logo: {

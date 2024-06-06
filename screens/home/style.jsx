@@ -18,20 +18,21 @@ export const paginapv = StyleSheet.create({
 
     titulo:{
         fontSize:40,
-        fontWeight: 'bold'
+        fontFamily: 'KollektifBold',
     },
 
     texto:{
         textAlign:'center',
         fontSize:25,
-        width: 800
+        width: 800,
+        fontFamily: 'Kollektif',
     },
 
     butao:{
         height: 50,
         width: 130,
         backgroundColor:'#38B6FF',
-        paddingTop:8,
+        paddingTop:14,
         borderRadius:10,
         border:'solid'
     },
@@ -59,8 +60,9 @@ export const paginapv = StyleSheet.create({
 
     enemTexto:{
         textAlign: 'center', 
-        fontWeight: 'bold',
+        
         fontSize: 20,
+        fontFamily: 'KollektifBold',
         
     }
 

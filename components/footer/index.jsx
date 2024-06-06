@@ -1,9 +1,29 @@
 import { View, Text, TextInput, TouchableOpacity, Image, Linking } from "react-native";
 import { footerestilo } from "./style";
 
-
+import { useState } from 'react';
+import * as Font from 'expo-font';
+import { useEffect } from 'react';
+import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
+import Kollektif from '../../assets/fonts/Kollektif.ttf';
 
 export default function Footer(){
+
+    const [fontsLoaded, setFontsLoaded] = useState(false);
+
+    useEffect(() => {
+      async function loadFonts() {
+        await Font.loadAsync({
+          KollektifBold: KollektifBold,
+          Kollektif: Kollektif,
+        });
+        setFontsLoaded(true);
+      }
+  
+      loadFonts();
+    }, []);
+
+
     return(
             <View style={footerestilo.footer}>
                 <View style={footerestilo.esquerdo}>

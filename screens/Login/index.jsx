@@ -1,8 +1,30 @@
 import { View, TextInput, TouchableOpacity, Text, Image } from "react-native";
 import { styles } from "./style";
 
+import  { useState } from 'react';
+import * as Font from 'expo-font';
+import { useEffect } from 'react';
+import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
+import Kollektif from '../../assets/fonts/Kollektif.ttf';
+
+
 
 export default function Login() {
+
+  
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    async function loadFonts() {
+      await Font.loadAsync({
+        KollektifBold: KollektifBold,
+        Kollektif: Kollektif,
+      });
+      setFontsLoaded(true);
+    }
+
+    loadFonts();
+  }, []);
 
     return (
       <View style={styles.container}> 
@@ -16,7 +38,7 @@ export default function Login() {
           <TextInput style={styles.TextInput} placeholder="Senha"/>
   
           <TouchableOpacity style={styles.botao}>
-            <Text style={{color: '#fff', fontSize: 22}}>Entrar</Text>
+            <Text style={{color: '#fff', fontSize: 22,   fontFamily: 'KollektifBold'}}>Entrar</Text>
           </TouchableOpacity>
         </View>
       </View>

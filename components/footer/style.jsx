@@ -23,18 +23,24 @@ export const footerestilo = StyleSheet.create({
     titulo: {
         fontSize: 35,
         fontWeight: 'bold',
+        fontFamily: 'KollektifBold',
+
    
         
     },
     subtitulo:{
         fontSize: 25,
-        fontWeight: 'bold'
+     
+        fontFamily: 'KollektifBold',
+
     },
 
     textosuporte: {
         fontSize: 18,
         width: 450,
         textAlign: 'left',
+        fontFamily: 'Kollektif',
+
         
     },
     Contato: {
@@ -44,7 +50,10 @@ export const footerestilo = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         marginTop: 10,
-        fontSize: 16
+        fontSize: 16,
+        fontFamily: 'KollektifBold',
+
+
     },
 
     mensagem: {
@@ -55,7 +64,8 @@ export const footerestilo = StyleSheet.create({
         padding: 10,
         marginTop: 10,
         fontSize: 16,
-        
+        fontFamily: 'KollektifBold',
+
     },
 
     esquerdo:{
